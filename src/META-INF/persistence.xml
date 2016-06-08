@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="controller-unit" transaction-type="JTA">
+		<jta-data-source>PostgreSQL Database</jta-data-source>
+		<class>it.uniroma3.model.Esame</class>
+		<class>it.uniroma3.model.Medico</class>
+		<class>it.uniroma3.model.Paziente</class>
+		<class>it.uniroma3.model.TipologiaDiEsame</class>
+		<class>it.uniroma3.model.Utente</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+			<property name="javax.persistence.jdbc.user" value="postgres"/>
+			<property name="javax.persistence.jdbc.password" value="postgres"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/progettoSiw"/>
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.format_sql" value="true"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PosgreSQLDialect"/>
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-7-openjdk-amd64">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSF 2.0 (Mojarra 2.0.3-FCS)">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+			<attribute name="owner.project.facets" value="jst.jsf"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/catalina-ha.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/catalina-tribes.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/ecj-4.2.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/el-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/jasper.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/jasper-el.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/tomcat7-websocket.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/tomcat-i18n-es.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/tomcat-jdbc.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/lib/websocket-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/librerie/arq-2.1.jar.zip"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/librerie/javax.faces-api-2.1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/librerie/postgresql-9.4.1208.jre6.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/librerie/taglibs-standard-jstlel-1.2.5.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/bval-core-0.5.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/bval-jsr303-0.5.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/catalina-ha.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/catalina-tribes.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-beanutils-core-1.8.3.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-digester-1.8.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/commons-pool-1.5.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/ecj-4.4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/el-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/FastInfoset-1.2.12.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/geronimo-javamail_1.4_mail-1.9.0-alpha-2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/geronimo-transaction-3.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/howl-1.0.1-1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/hsqldb-2.3.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/istack-commons-runtime-2.16.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/jansi-1.8.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/jasper.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/jasper-el.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/javaee-api-6.0-6.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/jaxb-core-2.2.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/mbean-annotation-api-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/myfaces-api-2.1.17.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/myfaces-impl-2.1.17.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-api-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-client-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-core-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-ejbd-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-hsql-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-http-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-javaagent.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-jee-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-jee-accessors-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-jpa-integration-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-loader-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-server-4.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openjpa-2.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openwebbeans-ee-1.2.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openwebbeans-ee-common-1.2.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openwebbeans-ejb-1.2.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openwebbeans-el22-1.2.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openwebbeans-impl-1.2.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openwebbeans-jsf-1.2.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openwebbeans-spi-1.2.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openwebbeans-web-1.2.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/quartz-openejb-shade-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/serp-1.14.1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/slf4j-api-1.7.14.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/slf4j-jdk14-1.7.14.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/swizzle-stream-1.6.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/sxc-jaxb-core-0.8.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/sxc-runtime-0.8.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat7-websocket.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat-i18n-es.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat-jdbc.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomee-catalina-1.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomee-common-1.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomee-jdbc-1.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomee-loader-1.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomee-mojarra-1.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomee-myfaces-1.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomee-webapp-1.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/websocket-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/xbean-asm5-shaded-4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/xbean-bundleutils-4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/xbean-finder-shaded-4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/xbean-naming-4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/xbean-reflect-4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/jpa/hibernate-entitymanager-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/envers/hibernate-envers-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/java8/hibernate-java8-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/jpa-metamodel-generator/hibernate-jpamodelgen-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/osgi/hibernate-osgi-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/osgi/org.osgi.compendium-4.3.1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/osgi/org.osgi.core-4.3.1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/classmate-1.3.0.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/hibernate-core-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/hibernate-jpa-2.1-api-1.0.0.Final.jar" sourcepath="/Progetto_siw"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/jandex-2.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/javassist-3.20.0-GA.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/simona/workspace/progettoSiw/WebContent/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
