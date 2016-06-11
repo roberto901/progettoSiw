@@ -42,7 +42,7 @@ public class TipologiaController  {
 	
 	public String listTipologie() {
 			this.tipologie = tipologiaDAO.findAll();
-		return "home.xhtml";
+		return LIST_TIPOLOGIE;
 	}
 
 
