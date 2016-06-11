@@ -26,12 +26,7 @@ public class UtenteFacade {
 		Utente utente = em.find(Utente.class, username);
 		return utente;
 	}
-	public EntityManager getEm() {
-		return em;
-	}
-	public void setEm(EntityManager em) {
-		this.em = em;
-	}
+	
 	public Map<String, Utente> getUtenti() {
 		return utenti;
 	}

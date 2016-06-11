@@ -4,12 +4,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
+
+
+import java.io.Serializable;
+
 import javax.persistence.Column;
 
 @Entity
-@NamedQuery(name = "trovaTipologie", query = "SELECT t FROM TipologiaDiEsame t")
-public class TipologiaDiEsame {
+public class TipologiaDiEsame implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7580905596032624487L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,8 +35,7 @@ public class TipologiaDiEsame {
 	}
 
 
-	public TipologiaDiEsame(Long codice, String nome, Double price, String description) {
-		this.codice = codice;
+	public TipologiaDiEsame( String nome, Double price, String description) {
 		this.nome = nome;
 		this.prezzo = price;
 		this.descrizione = description;
