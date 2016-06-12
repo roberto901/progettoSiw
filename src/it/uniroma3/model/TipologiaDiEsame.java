@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -30,6 +29,7 @@ public class TipologiaDiEsame implements Serializable {
 	@Column(length = 2000)
 	private String descrizione;
 
+
 	public TipologiaDiEsame(){
 
 	}
@@ -40,7 +40,6 @@ public class TipologiaDiEsame implements Serializable {
 		this.prezzo = price;
 		this.descrizione = description;
 	}
-
 
 	public Long getCodice() {
 		return codice;
@@ -58,7 +57,7 @@ public class TipologiaDiEsame implements Serializable {
 		this.nome = nome;
 	}
 
-	
+
 
 
 	public Double getPrezzo() {

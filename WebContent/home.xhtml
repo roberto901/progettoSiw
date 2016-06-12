@@ -9,7 +9,7 @@
 
 </link>
 <h:head>
-	<title>Tipologie</title>
+	<title>Tipologie Di Esami: </title>
 </h:head>
 <h:body>
 	<h1>Tipologie:</h1>
@@ -26,15 +26,9 @@
 		    			<td class="order-table-even-row">#{tipologia.nome}</td>
 		    			<td class="order-table-even-row">#{tipologia.prezzo}</td>
 		    			<td class="order-table-even-row">#{tipologia.descrizione}</td>
+		    			<td> <h:commandButton action="dettagliTipologia" value="vedi dettagli"></h:commandButton></td>
 		    		  </tr>
-	    			</h:panelGroup>
-	    		        <h:panelGroup rendered="#{status.odd}">
-	    			  <tr>
-		    			<td class="order-table-odd-row">#{tipolgoai.nome}</td>
-		    			<td class="order-table-odd-row">#{tipologia.prezzo}</td>
-		    			<td class="order-table-odd-row">#{tipologia.descrizione}</td>
-		    		  </tr>
-	    			</h:panelGroup>
+		    		  </h:panelGroup>
 	    		</ui:repeat>
     		</tbody>
     	</table>

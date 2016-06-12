@@ -7,7 +7,8 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
-import it.uniroma3.DAO.TipologiaDAO;
+import it.uniroma3.facade.TipologiaFacade;
+import it.uniroma3.model.Prerequisiti;
 import it.uniroma3.model.TipologiaDiEsame;
 
 @ManagedBean
@@ -15,7 +16,7 @@ public class TipologiaController  {
 
 
 	@EJB
-	private TipologiaDAO tipologiaDAO;
+	private TipologiaFacade tipologiaDAO;
 
 	private final static String EDIT_TIPOLOGIA = "creaTipologia.xhtml";
 	private final static String LIST_TIPOLOGIE = "home.xhtml";
@@ -27,6 +28,7 @@ public class TipologiaController  {
 	private Double prezzo;
 	private TipologiaDiEsame tipologia;
 	private List<TipologiaDiEsame> tipologie;
+	private List<Prerequisiti> prerequisiti;
 
 	
 
@@ -43,6 +45,10 @@ public class TipologiaController  {
 	public String listTipologie() {
 			this.tipologie = tipologiaDAO.findAll();
 		return LIST_TIPOLOGIE;
+	}
+	public String listPrerequisiti() {
+		this.prerequisiti = tipologiaDAO.Prerequisiti();
+		return "dettagliTipologia.xhtml";
 	}
 
 
@@ -101,6 +107,14 @@ public class TipologiaController  {
 
 	public void setPrezzo(Double prezzo) {
 		this.prezzo = prezzo;
+	}
+
+	public List<Prerequisiti> getPrerequisiti() {
+		return prerequisiti;
+	}
+
+	public void setPrerequisiti(List<Prerequisiti> prerequisiti) {
+		this.prerequisiti = prerequisiti;
 	}
 	
 	

@@ -53,7 +53,7 @@ public class LoginController  {
 	
 	public String login(){
 		Utente utente = utenteFacade.getUtente(username);
-		if( utente.getPassword().equals(password))
+		if(utente!=null && utente.getPassword().equals(password))
 			return successo;
 		else
 			return fallimento;

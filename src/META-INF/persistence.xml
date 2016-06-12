@@ -10,6 +10,7 @@
 		<class>it.uniroma3.model.Paziente</class>
 		<class>it.uniroma3.model.TipologiaDiEsame</class>
 		<class>it.uniroma3.model.Utente</class>
+		<class>it.uniroma3.model.Prerequisiti</class>
 		<properties>
 			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)" />
 		</properties>
