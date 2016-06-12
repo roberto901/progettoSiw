@@ -25,14 +25,6 @@ public class TipologiaFacade    {
 		List<TipologiaDiEsame> tipologie = em.createQuery(cq).getResultList();
 		return tipologie;
 	}
-	
-	public List<Prerequisiti> Prerequisiti() {
-		CriteriaQuery<Prerequisiti> cq = em.getCriteriaBuilder().createQuery(Prerequisiti.class);
-		cq.select(cq.from(Prerequisiti.class));
-		List<Prerequisiti> prerequisiti = em.createQuery(cq).getResultList();
-		return prerequisiti;
-
-	}
 
 	public TipologiaDiEsame createTipologia(String nome,Double prezzo,String descrizione){
 		TipologiaDiEsame tipologia = new TipologiaDiEsame(nome, prezzo, descrizione);

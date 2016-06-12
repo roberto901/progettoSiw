@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</link>
+<h:head>
+	<title>Prerequisiti</title>
+</h:head>
+<body>
+	<h:form>
+		<h1>Prerequisiti per la tipologia #{tipologiaController.nome}</h1>
+		<div>
+			CodiceTipologia :
+			<h:inputText value="#{prerequisitiController.tipologia}" />
+		</div>
+		<div>
+			Prerequisito :
+			<h:inputText value="#{prerequisitiController.prerequisiti}" />
+		</div>
+		<div>
+			Descrizione dettagliata :
+			<h:inputText
+				value="#{PrerequisitiController.descrizionePrerequisiti}" />
+		</div>
+		<div>
+			<h:commandButton value="Salva"
+				action="#{prerequisitiController.create}" />
+		</div>
+	</h:form>
+</body>
+</html>

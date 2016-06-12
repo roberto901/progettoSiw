@@ -11,34 +11,34 @@
 	<title>Tipologie</title>
 </h:head>
 <h:body>
-<f:view>
-	<h1>Tipologie Di Esami:</h1>
-	<table class="order-table">
-		<tr>
-			<th class="order-table-header">Nome</th>
-			<th class="order-table-header">Prezzo</th>
-			<th class="order-table-header">Descrizione</th>
-		</tr>
-		<tbody>
-			<ui:repeat var="tipologia" value="#{tipologiaController.tipologie}"
-				varStatus="status">
-				<h:panelGroup rendered="#{status.even}">
-					<tr>
-						<h:form>
-							<td class="order-table-even-row">#{tipologia.nome}</td>
-							<td class="order-table-even-row">#{tipologia.prezzo}</td>
-							<td class="order-table-even-row">#{tipologia.descrizione}</td>
-						</h:form>
-						<h:form>
-					 <td> <h:commandButton action="#{TipologiaController.listPrerequisiti}"
-					value="Vedi dettagli"> 
-				</h:commandButton></td>
-						</h:form>
-					</tr>
-				</h:panelGroup>
-			</ui:repeat>
-		</tbody>
-	</table>
-</f:view>
+	<h:form>
+		<f:view>
+			<h1>Tipologie Di Esami:</h1>
+			<table class="order-table">
+				<tr>
+					<th class="order-table-header">Nome</th>
+					<th class="order-table-header">Prezzo</th>
+					<th class="order-table-header">Descrizione</th>
+				</tr>
+				<tbody>
+					<ui:repeat var="tipologia" value="#{tipologiaController.tipologie}"
+						varStatus="status">
+						<h:panelGroup rendered="#{status.even}">
+							<tr>
+								<td class="order-table-even-row">#{tipologia.nome}</td>
+								<td class="order-table-even-row">#{tipologia.prezzo}</td>
+								<td class="order-table-even-row">#{tipologia.descrizione}</td>
+
+								<td><h:commandButton
+										action="#{prerequisitiController.listPrerequisiti}"
+										value="Vedi dettagli" /></td>
+
+							</tr>
+						</h:panelGroup>
+					</ui:repeat>
+				</tbody>
+			</table>
+		</f:view>
+	</h:form>
 </h:body>
 </html>

@@ -18,7 +18,7 @@ public class TipologiaController  {
 	@EJB
 	private TipologiaFacade tipologiaDAO;
 
-	private final static String EDIT_TIPOLOGIA = "creaTipologia.xhtml";
+	private final static String EDIT_TIPOLOGIA = "NuovaTipologia.xhtml";
 	private final static String LIST_TIPOLOGIE = "home.xhtml";
 	private final static String PREREQUISITI = "dettagliTipologia.xhtml";
 	
@@ -46,10 +46,6 @@ public class TipologiaController  {
 	public String listTipologie() {
 			this.tipologie = tipologiaDAO.findAll();
 		return LIST_TIPOLOGIE;
-	}
-	public String listPrerequisiti() {
-		this.prerequisiti = this.tipologiaDAO.Prerequisiti();
-		return PREREQUISITI;
 	}
 
 
@@ -117,7 +113,4 @@ public class TipologiaController  {
 	public void setPrerequisiti(List<Prerequisiti> prerequisiti) {
 		this.prerequisiti = prerequisiti;
 	}
-	
-	
-
 }
