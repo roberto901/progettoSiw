@@ -20,6 +20,7 @@ public class TipologiaController  {
 
 	private final static String EDIT_TIPOLOGIA = "creaTipologia.xhtml";
 	private final static String LIST_TIPOLOGIE = "home.xhtml";
+	private final static String PREREQUISITI = "dettagliTipologia.xhtml";
 	
 	@ManagedProperty(value="#{param.codice}")
 	private Long codice;
@@ -47,8 +48,8 @@ public class TipologiaController  {
 		return LIST_TIPOLOGIE;
 	}
 	public String listPrerequisiti() {
-		this.prerequisiti = tipologiaDAO.Prerequisiti();
-		return "dettagliTipologia.xhtml";
+		this.prerequisiti = this.tipologiaDAO.Prerequisiti();
+		return PREREQUISITI;
 	}
 
 

@@ -7,20 +7,33 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </link>
-<f:view>
-<h:head>
-	<title>#{tipologia.nome}</title>
-</h:head>
-<h:body>
-	<td>Descrizione : #{tipologia.descrizione}</td>
-	<td>Prerequisiti :</td>
-	<ui:repeat var="prerequisiti" value="#{tipologiaController.prerequisiti}" varStatus="status">
-	    			<h:panelGroup rendered="#{status.even}">
-	    		<td>	#{prerequisiti.prerequisiti}  ( #{prerequisiti.descrizionePrerequisiti} ) </td>
-	    		</h:panelGroup>
-	    		</ui:repeat>
-	<td>Prezzo : #{tipologia.prezzo}</td>
-<h:commandButton action="home" value="Torna alla lista"></h:commandButton>
-</h:body>
-</f:view>
+	<h:head>
+		<title>Dettagli</title>
+	</h:head>
+	<h:body>
+	<f:view>
+	<h:form>
+		<h1> #{tipologiaController.tipologia.nome} :</h1>
+		
+		<td>Descrizione : #{tipologiaController.tipologia.descrizione}</td>
+		<td>Prerequisiti : 
+		<ui:repeat var="prerequisiti"
+			value="#{tipologiaController.prerequisiti}" varStatus="status">
+			<h:panelGroup rendered="#{status.even}">
+				<td>#{prerequisiti.prerequisiti} (
+					#{prerequisiti.descrizionePrerequisiti} )</td>
+			</h:panelGroup>
+		</ui:repeat>
+		</td>
+		<td>Prezzo : #{tipologiaController.tipologia.prezzo}</td>
+		</h:form>
+		<div class="btn-group">
+			<h:form>
+				<h:commandButton action="#{tipologiaController.listTipologie}"
+					value="Torna alla lista di tipologie">
+				</h:commandButton>
+			</h:form>
+		</div>
+		</f:view>
+	</h:body>
 </html>

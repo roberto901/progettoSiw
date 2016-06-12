@@ -25,9 +25,12 @@ public class TipologiaFacade    {
 		List<TipologiaDiEsame> tipologie = em.createQuery(cq).getResultList();
 		return tipologie;
 	}
+	
 	public List<Prerequisiti> Prerequisiti() {
-		List<Prerequisiti> p = em.createQuery("SELECT * FROM Prerequisiti, TipologiaDiEsame where tipologia = codice", Prerequisiti.class).getResultList();
-		return p;
+		CriteriaQuery<Prerequisiti> cq = em.getCriteriaBuilder().createQuery(Prerequisiti.class);
+		cq.select(cq.from(Prerequisiti.class));
+		List<Prerequisiti> prerequisiti = em.createQuery(cq).getResultList();
+		return prerequisiti;
 
 	}
 
