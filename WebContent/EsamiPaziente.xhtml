@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</link>
+<head>
+<title>Esami</title>
+</head>
+<body>
+	<table class="order-table">
+		<tr>
+			<th class="order-table-header">Esame :</th>
+		</tr>
+		<tbody>
+			<ui:repeat var="Esame" value="#{EsameController.nome}"
+				varStatus="status">
+				<tr>
+					<td class="order-table-row">#{esame.nome}</td>
+					<td><h:commandButton
+							action="#{esameController.dettagli}"
+							value="Vedi dettagli" /></td>
+				</tr>
+			</ui:repeat>
+		</tbody>
+	</table>
+
+</body>
+</html>

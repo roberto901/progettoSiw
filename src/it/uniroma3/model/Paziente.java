@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Paziente {
@@ -22,11 +23,8 @@ public class Paziente {
 	@Column (nullable = false)
 	private String cognome;
 
-	@Column(nullable = false)
-	private String username ;
-
-	@Column(nullable = false)
-	private String password;
+	@OneToOne
+	private Utente utente;
 
 	@OneToMany
 	(mappedBy = "paziente")

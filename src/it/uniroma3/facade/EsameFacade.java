@@ -6,6 +6,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 
 import it.uniroma3.model.Esame;
@@ -25,14 +26,18 @@ public class EsameFacade {
 		List<Esame> esami = em.createQuery(cq).getResultList();
 		return esami;
 	}
-	
+	public List<Esame> findPerPaziente(Paziente paziente) {
+		Query q = em.createQuery("select t from Esame t where paziente = ? ");
+		q.setParameter(1, paziente);
+		return q.getResultList();
+	}
 	
 	public Esame createEsame(TipologiaDiEsame tipologia,Date dataPrenotazione, Date dataEsame, Paziente paziente,Medico medico){
 		Esame esame = new Esame(tipologia,dataPrenotazione,dataEsame,paziente,medico);
 		em.persist(tipologia);
 		return esame;
 	}
-	public Esame getTipologia(Long codice){
+	public Esame getEsame(Long codice){
 		return em.find(Esame.class, codice);
 	}
 
