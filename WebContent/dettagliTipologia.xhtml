@@ -11,26 +11,26 @@
 	<title>Dettagli</title>
 </h:head>
 <h:body>
-		<h:form>
-			<h1>#{tipologiaController.tipologia.nome} :</h1>
+	<h:form>
+		<h1>#{tipologia.nome} :</h1>
 
-			<td>Descrizione :<h:outputText
-					value="#{tipologiaController.tipologia.descrizione}" /></td>
-			<td>Prerequisiti : <ui:repeat var="prerequisiti"
-					value="#{prerequisitiController.listPrerequisiti}"
-					varStatus="status">
-					<h:panelGroup rendered="#{status.even}">
-						<td><h:outputText value="#{prerequisiti.prerequisiti}" /> <h:outputText
-								value="#{prerequisiti.descrizionePrerequisiti}" /></td>
-					</h:panelGroup>
-				</ui:repeat>
-			</td>
-			<td>Prezzo : #{tipologiaController.tipologia.prezzo}</td>
-			<div class="btn-group">
-				<h:commandButton action="#{tipologiaController.listTipologie}"
-					value="Torna alla lista di tipologie">
-				</h:commandButton>
-			</div>
-		</h:form>
+		<td>Descrizione :<h:outputText
+				value="#{tipologia.descrizione}" /></td>
+		<td>Prerequisiti : <ui:repeat var="prerequisiti"
+				value="#{prerequisitiController.listPrerequisiti}"
+				varStatus="status">
+
+				<td><h:outputText value="#{prerequisiti.prerequisiti}" /> <h:outputText
+						value="#{prerequisiti.descrizionePrerequisiti}" /></td>
+
+			</ui:repeat>
+		</td>
+		<td>Prezzo : #{tipologiaController.tipologia.prezzo}</td>
+		<div class="btn-group">
+			<h:commandButton action="#{tipologiaController.listTipologie}"
+				value="Torna alla lista di tipologie">
+			</h:commandButton>
+		</div>
+	</h:form>
 </h:body>
 </html>

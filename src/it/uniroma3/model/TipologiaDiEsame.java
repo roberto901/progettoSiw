@@ -4,9 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 @Entity
@@ -20,14 +24,20 @@ public class TipologiaDiEsame implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long codice;
+	
+	@Column
+	private Long cod;
 
 	@Column(nullable = false)
 	private String nome;
 
 	private Double prezzo;
 
-	@Column(length = 2000)
+	@Column(nullable = false)
 	private String descrizione;
+
+//	@OneToMany
+//	private List<Prerequisiti> prerequisiti;
 
 
 	public TipologiaDiEsame(){
@@ -35,11 +45,23 @@ public class TipologiaDiEsame implements Serializable {
 	}
 
 
-	public TipologiaDiEsame( String nome, Double price, String description) {
+	public TipologiaDiEsame(Long codice, String nome, Double price, String description) {
+		this.cod = codice;
 		this.nome = nome;
 		this.prezzo = price;
 		this.descrizione = description;
+//		this.prerequisiti = new ArrayList<Prerequisiti>();
 	}
+
+	public Long getCod() {
+		return cod;
+	}
+
+
+	public void setCod(Long cod) {
+		this.cod = cod;
+	}
+
 
 	public Long getCodice() {
 		return codice;
@@ -79,6 +101,18 @@ public class TipologiaDiEsame implements Serializable {
 		this.descrizione = descrizione;
 	}
 
+
+
+//	public List<Prerequisiti> getPrerequisiti() {
+//		if (prerequisiti==null)
+//			prerequisiti = new ArrayList<Prerequisiti>();
+//		return prerequisiti;
+//	}
+//
+//
+//	public void setPrerequisiti(List<Prerequisiti> prerequisiti) {
+//		this.prerequisiti = prerequisiti;
+//	}
 
 
 	@Override

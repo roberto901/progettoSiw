@@ -14,6 +14,10 @@
 <h:body>
 	<f:view>
 		<h:form>
+		<div>
+				Codice :
+				<h:inputText value="#{tipologiaController.codice}" />
+			</div>
 			<div>
 				Nome :
 				<h:inputText value="#{tipologiaController.nome}" />
@@ -26,14 +30,8 @@
 				Prezzo :
 				<h:inputText value="#{tipologiaController.prezzo}" />
 			</div>
-		</h:form>
-		<h:form>
 			<div>
 				<h:commandButton value="Inserisci prerequisiti per questa tipologia"
-					action="NuovoPrerequisito" />
-			</div>
-			<div>
-				<h:commandButton value="Salva"
 					action="#{tipologiaController.create}" />
 			</div>
 		</h:form>

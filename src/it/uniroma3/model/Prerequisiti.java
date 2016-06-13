@@ -15,8 +15,8 @@ public class Prerequisiti implements Serializable {
 @GeneratedValue(strategy = GenerationType.AUTO)
 private long id;
 
-@Column(nullable = false)
-private String Tipologia;
+@ManyToOne
+private TipologiaDiEsame Tipologia;
 
 @Column (nullable = false)
 private String prerequisiti;
@@ -25,11 +25,12 @@ private String prerequisiti;
 private String descrizionePrerequisiti;
 
 public Prerequisiti() {}
-public Prerequisiti(String tipologia,String prerequisiti,String descrizionePrerequisiti) {
+
+public Prerequisiti(String prerequisiti,String descrizionePrerequisiti, TipologiaDiEsame tipologia) {
 	this.prerequisiti = prerequisiti;
-	this.Tipologia = tipologia;
 	this.descrizionePrerequisiti = descrizionePrerequisiti;
-}
+	this.Tipologia = tipologia;
+	}
 
 public long getId() {
 	return id;
@@ -38,15 +39,12 @@ public long getId() {
 public void setId(long id) {
 	this.id = id;
 }
-
-public String getTipologia() {
+public TipologiaDiEsame getTipologia() {
 	return Tipologia;
 }
-
-public void setTipologia(String tipologia) {
+public void setTipologia(TipologiaDiEsame tipologia) {
 	Tipologia = tipologia;
 }
-
 public String getPrerequisiti() {
 	return prerequisiti;
 }

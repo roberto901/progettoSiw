@@ -17,24 +17,19 @@
 			<table class="order-table">
 				<tr>
 					<th class="order-table-header">Nome</th>
-					<th class="order-table-header">Prezzo</th>
+
 					<th class="order-table-header">Descrizione</th>
 				</tr>
 				<tbody>
 					<ui:repeat var="tipologia" value="#{tipologiaController.tipologie}"
 						varStatus="status">
-						<h:panelGroup rendered="#{status.even}">
-							<tr>
-								<td class="order-table-even-row">#{tipologia.nome}</td>
-								<td class="order-table-even-row">#{tipologia.prezzo}</td>
-								<td class="order-table-even-row">#{tipologia.descrizione}</td>
-
-								<td><h:commandButton
-										action="#{prerequisitiController.listPrerequisiti}"
-										value="Vedi dettagli" /></td>
-
-							</tr>
-						</h:panelGroup>
+						<tr>
+							<td class="order-table-row">#{tipologia.nome}</td>
+							<td class="order-table-row">#{tipologia.descrizione}</td>
+							<td><h:commandButton
+									action="#{tipologiaController.listPrerequisiti}"
+									value="Vedi dettagli" /></td>
+						</tr>
 					</ui:repeat>
 				</tbody>
 			</table>

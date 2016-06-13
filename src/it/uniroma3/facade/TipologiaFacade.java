@@ -25,17 +25,15 @@ public class TipologiaFacade    {
 		List<TipologiaDiEsame> tipologie = em.createQuery(cq).getResultList();
 		return tipologie;
 	}
-
-	public TipologiaDiEsame createTipologia(String nome,Double prezzo,String descrizione){
-		TipologiaDiEsame tipologia = new TipologiaDiEsame(nome, prezzo, descrizione);
+	
+	public TipologiaDiEsame createTipologia(String nome,Double prezzo,String descrizione, Long codice){
+		TipologiaDiEsame tipologia = new TipologiaDiEsame(codice, nome, prezzo, descrizione);
 		em.persist(tipologia);
 		return tipologia;
 	}
 
 	public TipologiaDiEsame getTipologia(Long codice){
-		Query query = em.createNamedQuery("SELECT * from tipologiadiesame where codice = ?");
-		query.setParameter(1, codice);
-		return (TipologiaDiEsame) query.getSingleResult();
+		return em.find(TipologiaDiEsame.class, codice);
 	}
 
 	public void updateTipologia(TipologiaDiEsame tipologia){

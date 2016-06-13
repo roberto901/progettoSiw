@@ -11,25 +11,26 @@
 	<title>Prerequisiti</title>
 </h:head>
 <body>
-	<h:form>
-		<h1>Prerequisiti per la tipologia #{tipologiaController.nome}</h1>
-		<div>
-			CodiceTipologia :
-			<h:inputText value="#{prerequisitiController.tipologia}" />
-		</div>
-		<div>
-			Prerequisito :
-			<h:inputText value="#{prerequisitiController.prerequisiti}" />
-		</div>
-		<div>
-			Descrizione dettagliata :
-			<h:inputText
-				value="#{PrerequisitiController.descrizionePrerequisiti}" />
-		</div>
-		<div>
-			<h:commandButton value="Salva"
-				action="#{prerequisitiController.create}" />
-		</div>
-	</h:form>
+	<f:view>
+		<h:form>
+			<h1>Prerequisiti per la tipologia #{tipologiaController.nome}</h1>
+			<div>
+				Prerequisito :
+				<h:inputText value="#{tipologiaController.prerequisito}" />
+			</div>
+			<div>
+				Descrizione dettagliata :
+				<h:inputText value="#{tipologiaController.descrizionePrerequisiti}" />
+			</div>
+			<div>
+				<h:commandButton value="Inserisci un altro prerequisito"
+					action="#{tipologiaController.createP}" />
+			</div>
+			<div>
+				<h:commandButton value="Fine"
+					action="#{tipologiaController.createPR}" />
+			</div>
+		</h:form>
+	</f:view>
 </body>
 </html>
