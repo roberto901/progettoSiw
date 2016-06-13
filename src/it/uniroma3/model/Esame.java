@@ -7,19 +7,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@NamedQueries({
-	@NamedQuery(name="EsamiMedico",
-			query="SELECT e FROM Esame e WHERE medicoId = :id"),
-	@NamedQuery(name="EsamiPaziente",
-	query="SELECT e FROM Esame e WHERE pazienteId = :id")
-})
 public class Esame {
 
 	@Id
@@ -41,7 +33,7 @@ public class Esame {
 	@OneToOne
 	private Paziente paziente;
 
-	protected Esame() {
+	public Esame() {
 	}
 
 	@Override
@@ -141,6 +133,17 @@ public class Esame {
 		this.dataPrenotazione = dataPrenotazione;
 		this.dataEsameEffettuato = dataEsameEffettuato;
 	}
+
+	public Esame(TipologiaDiEsame tipologia,Date dataPrenotazione, Date dataEsame, Paziente paziente,Medico medico) {
+		super();
+		this.tipologia = tipologia;
+		this.medico = medico;
+		this.dataPrenotazione = dataPrenotazione;
+		this.dataEsameEffettuato = dataEsame;
+		this.paziente = paziente;
+	}
+
+	 
 
 
 }
