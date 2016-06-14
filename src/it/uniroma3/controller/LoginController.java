@@ -27,7 +27,7 @@ public class LoginController  {
 	@ManagedProperty(value="#{param.username}")
 
 	private String username;	 
-	
+
 	public Utente getUtente() {
 		return utente;
 	}
@@ -89,8 +89,9 @@ public class LoginController  {
 	public String login(){
 		Utente utente = utenteFacade.getUtente(username);
 		if(utente!=null){
-			if(utente.getPassword().equals(password) && utente.getRuolo() == 1)
+			if(utente.getPassword().equals(password) && utente.getRuolo() == 1) {
 				return successo_amministratore;
+			}
 			if (utente.getPassword().equals(password) && utente.getRuolo() == 2) {
 				this.paziente = utenteFacade.findPaziente(utente);
 				this.esami = this.esameFacade.findPerPaziente(this.paziente);
@@ -98,6 +99,14 @@ public class LoginController  {
 			}
 		}
 		return fallimento;
+	}
+	public boolean AutenticaP() {
+			return true;
+		
+		
+	}
+	public boolean AutenticaA() {
+			return true;
 	}
 }
 

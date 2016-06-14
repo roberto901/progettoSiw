@@ -12,7 +12,7 @@
 </head>
 <h1>Benvenuto #{loginController.paziente.nome}
 	#{loginController.paziente.cognome}</h1>
-<h:body>
+<h:body rendered="#{loginController.AutenticaP}">
 	<h:form>Esami :
 					<h:dataTable var="esame" value="#{loginController.esami}">
 						<h:column>

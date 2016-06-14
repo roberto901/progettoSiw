@@ -12,7 +12,7 @@
 <title>Amministratore</title>
 </head>
 <h1>Benvenuto</h1>
-    <body>
+    <h:body rendered=#{loginController.AutenticaA}> 
     <div class="btn-group">
 		<form action="NuovaTipologia.xhtml">
 			<button type="submit" class="btn btn-default">Inserisci una nuova tipologia di esame</button>
@@ -23,6 +23,6 @@
 			<button type="submit" class="btn btn-default">Inserisci un nuovo esame</button>
 		</form>
 	</div>
-    </body>
+    </h:body>
 
 </html>
