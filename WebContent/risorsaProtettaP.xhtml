@@ -10,12 +10,27 @@
 <head>
 <title>Paziente</title>
 </head>
-<h1>Benvenuto</h1>
-    <body>
-    <div class="btn-group">
-		<form action="EsamiPaziente.xhtml">
-			<button type="submit" class="btn btn-default">Consulta i tuoi esami</button>
-		</form>
-	</div>
-</body>
+<h1>Benvenuto #{loginController.paziente.nome}
+	#{loginController.paziente.cognome}</h1>
+<h:body>
+	<h:form>
+		<f:view>
+			<table class="order-table">
+				<tr>
+					<th class="order-table-header">Esami :</th>
+				</tr>
+				<tbody>
+					<ui:repeat var="esame" value="#{loginController.esami}">
+						<tr>
+							<td class="order-table-row">Esame : #{esame.tipologia.nome}</td>
+							<td><h:commandButton
+									action="#{esameController.visualizzaEsame(esame)}"
+									value="Vedi dettagli" /></td>
+						</tr>
+					</ui:repeat>
+				</tbody>
+			</table>
+		</f:view>
+	</h:form>
+</h:body>
 </html>

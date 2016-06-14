@@ -47,8 +47,9 @@ public class TipologiaController  {
 		this.p = this.prerequisitiFacade.createPrerequisiti(prerequisito,descrizionePrerequisiti,tipologia);
 		return "risorsaProtettaA.xhtml";
 	}
-	public String listPrerequisiti() {
-		this.prerequisiti = prerequisitiFacade.findPT(tipologia.getCodice());
+	public String listPrerequisiti(TipologiaDiEsame tipologia) {
+		this.tipologia = tipologia;
+		this.prerequisiti = prerequisitiFacade.findPT(tipologia);
 		return "dettagliTipologia.xhtml";
 	}
 

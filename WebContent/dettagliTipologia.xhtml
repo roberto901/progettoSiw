@@ -12,12 +12,12 @@
 </h:head>
 <h:body>
 	<h:form>
-		<h1>#{tipologia.nome} :</h1>
+		<h1>#{tipologiaController.tipologia.nome} :</h1>
 
 		<td>Descrizione :<h:outputText
-				value="#{tipologia.descrizione}" /></td>
+				value="#{tipologiaController.tipologia.descrizione}" /></td>
 		<td>Prerequisiti : <ui:repeat var="prerequisiti"
-				value="#{prerequisitiController.listPrerequisiti}"
+				value="#{tipologiaController.listPrerequisiti(tipologiaController.tipologia)}"
 				varStatus="status">
 
 				<td><h:outputText value="#{prerequisiti.prerequisiti}" /> <h:outputText

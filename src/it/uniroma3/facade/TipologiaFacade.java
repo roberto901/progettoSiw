@@ -35,7 +35,11 @@ public class TipologiaFacade    {
 	public TipologiaDiEsame getTipologia(Long codice){
 		return em.find(TipologiaDiEsame.class, codice);
 	}
-
+	public TipologiaDiEsame findTipologia(Long codice) {
+		Query q = em.createQuery("select t from TipologiaDiEsame t where t.cod = ?1");
+		q.setParameter(1, codice);
+		return (TipologiaDiEsame)q.getSingleResult();
+	}
 	public void updateTipologia(TipologiaDiEsame tipologia){
 		em.merge(tipologia);
 	}

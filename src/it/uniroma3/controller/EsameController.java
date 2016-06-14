@@ -5,23 +5,26 @@ import java.util.List;
 
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 import it.uniroma3.facade.EsameFacade;
+import it.uniroma3.facade.UtenteFacade;
 import it.uniroma3.model.Esame;
 import it.uniroma3.model.Medico;
 import it.uniroma3.model.Paziente;
+import it.uniroma3.model.Risultati;
 import it.uniroma3.model.TipologiaDiEsame;
+import it.uniroma3.model.Utente;
 
 @ManagedBean
 public class EsameController {
 @EJB
 private EsameFacade esameFacade;
-
-
+@EJB
+private UtenteFacade utenteFacade;
+private Risultati risultato;
+private List<Risultati> risultati;
+private String nomeRes;
+private String valoreRes;
 private TipologiaDiEsame tipologia;
 private Medico medico;
 private Date dataPrenotazione;
@@ -60,8 +63,46 @@ public Paziente getPaziente() {
 public void setPaziente(Paziente paziente) {
 	this.paziente = paziente;
 }
-public String dettagli() {
-	this.esami = this.esameFacade.findPerPaziente(paziente);
+public String getNomeRes() {
+	return nomeRes;
+}
+public void setNomeRes(String nomeRes) {
+	this.nomeRes = nomeRes;
+}
+public String getValoreRes() {
+	return valoreRes;
+}
+public void setValoreRes(String valoreRes) {
+	this.valoreRes = valoreRes;
+}
+public Esame getEsame() {
+	return esame;
+}
+public void setEsame(Esame esame) {
+	this.esame = esame;
+}
+public List<Esame> getEsami() {
+	return esami;
+}
+public void setEsami(List<Esame> esami) {
+	this.esami = esami;
+}
+public Risultati getRisultato() {
+	return risultato;
+}
+public void setRisultato(Risultati risultato) {
+	this.risultato = risultato;
+}
+public List<Risultati> getRisultati() {
+	return risultati;
+}
+public void setRisultati(List<Risultati> risultati) {
+	this.risultati = risultati;
+}
+public String visualizzaEsame(Esame esame) {
+	this.esame = esame;
+	this.risultati = esameFacade.findRisultati(esame);
 	return "dettagliEsame.xhtml";
 }
+
 }

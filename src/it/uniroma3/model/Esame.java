@@ -43,6 +43,8 @@ public class Esame {
 		result = prime * result + ((dataEsameEffettuato == null) ? 0 : dataEsameEffettuato.hashCode());
 		result = prime * result + ((dataPrenotazione == null) ? 0 : dataPrenotazione.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((medico == null) ? 0 : medico.hashCode());
+		result = prime * result + ((paziente == null) ? 0 : paziente.hashCode());
 		return result;
 	}
 
@@ -69,6 +71,16 @@ public class Esame {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
+			return false;
+		if (medico == null) {
+			if (other.medico != null)
+				return false;
+		} else if (!medico.equals(other.medico))
+			return false;
+		if (paziente == null) {
+			if (other.paziente != null)
+				return false;
+		} else if (!paziente.equals(other.paziente))
 			return false;
 		return true;
 	}

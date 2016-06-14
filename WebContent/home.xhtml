@@ -21,13 +21,12 @@
 					<th class="order-table-header">Descrizione</th>
 				</tr>
 				<tbody>
-					<ui:repeat var="tipologia" value="#{tipologiaController.tipologie}"
-						varStatus="status">
+					<ui:repeat var="tipologia" value="#{tipologiaController.tipologie}" >
 						<tr>
 							<td class="order-table-row">#{tipologia.nome}</td>
 							<td class="order-table-row">#{tipologia.descrizione}</td>
 							<td><h:commandButton
-									action="#{tipologiaController.listPrerequisiti}"
+									action="#{tipologiaController.listPrerequisiti(tipologia)}"
 									value="Vedi dettagli" /></td>
 						</tr>
 					</ui:repeat>

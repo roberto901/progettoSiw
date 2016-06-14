@@ -26,15 +26,22 @@ public class Paziente {
 	@OneToOne
 	private Utente utente;
 
-	@OneToMany
-	(mappedBy = "paziente")
-	private Set<Esame> esamiPaziente;
+
+
+	public Utente getUtente() {
+		return utente;
+	}
+
+	public void setUtente(Utente utente) {
+		this.utente = utente;
+	}
 
 	public Paziente(){}
 
-	public Paziente(String nome, String cognome) {
+	public Paziente(String nome, String cognome,Utente utente) {
 		super();
 		this.nome = nome;
+		this.utente=utente;
 		this.cognome = cognome;
 	}
 
@@ -62,13 +69,6 @@ public class Paziente {
 		this.cognome = cognome;
 	}
 
-	public Set<Esame> getEsamiPaziente() {
-		return esamiPaziente;
-	}
-
-	public void setEsamiPaziente(Set<Esame> esamiPaziente) {
-		this.esamiPaziente = esamiPaziente;
-	}
 
 	@Override
 	public int hashCode() {

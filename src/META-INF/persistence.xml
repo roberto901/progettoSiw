@@ -12,6 +12,7 @@
 		<class>it.uniroma3.model.TipologiaDiEsame</class>
 		<class>it.uniroma3.model.Utente</class>
 		<class>it.uniroma3.model.Prerequisiti</class>
+		<class>it.uniroma3.model.Risultati</class>
 		<properties>
 			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)" />
 			<property name="openjpa.jdbc.MappingDefaults"

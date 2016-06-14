@@ -28,9 +28,9 @@ public class PrerequisitiFacade {
 		List<Prerequisiti> prerequisiti = em.createQuery(cq).getResultList();
 		return prerequisiti;
 	}
-	public List<Prerequisiti> findPT(Long codice) {
-		Query q = em.createQuery("select t from Prerequisiti t where tipologia_codice = ? ");
-		q.setParameter(1, codice);
+	public List<Prerequisiti> findPT(TipologiaDiEsame tipologia) {
+		Query q = em.createQuery("select t from Prerequisiti t where t.tipologia = ?1 ");
+		q.setParameter(1, tipologia);
 		return q.getResultList();
 	}
 	public Prerequisiti getPrerequisiti(Long id) {

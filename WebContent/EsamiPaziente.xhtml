@@ -10,23 +10,25 @@
 <head>
 <title>Esami</title>
 </head>
-<body>
+<h:body>
+<f:view>
+<h:form>
 	<table class="order-table">
 		<tr>
-			<th class="order-table-header">Esame :</th>
+			<th class="order-table-header">Esami di #{loginController.paziente.nome} #{loginController.paziente.cognome} :</th>
 		</tr>
 		<tbody>
-			<ui:repeat var="Esame" value="#{EsameController.nome}"
-				varStatus="status">
+			<ui:repeat var="esame" value="#{loginController.esami}" >
 				<tr>
 					<td class="order-table-row">#{esame.nome}</td>
 					<td><h:commandButton
-							action="#{esameController.dettagli}"
+							action="#{esameController.dettagliEsame}"
 							value="Vedi dettagli" /></td>
 				</tr>
 			</ui:repeat>
 		</tbody>
 	</table>
-
-</body>
+</h:form>
+</f:view>
+</h:body>
 </html>

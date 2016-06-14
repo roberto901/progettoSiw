@@ -7,15 +7,24 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </link>
-<title>#{esameController.nome}</title>
+<title>#{esameController.esame.tipologia.nome}</title>
 </head>
 <h:body>
 	<h:form>
-		<h1>#{esameController.nome} :</h1>
-		</td>
-		<td>Prezzo : #{tipologiaController.tipologia.prezzo}</td>
-		<div class="btn-group">
-		</div>
+	<f:view>
+		<h1>#{esameController.esame.tipologia.nome} :</h1>
+
+		<td>Esame : #{esameController.esame.tipologia.descrizione}</td>
+		<td>Medico : #{esameController.esame.medico.nome} #{esame.medico.cognome}</td>
+		<td>Data Esame Effettuato : #{esameController.esame.dataEsameEffettuato}</td>
+		<td>Data Prenotazione : #{esameController.esame.dataPrenotazione}</td>
+		<ui:repeat var="risultati" value="#{esameController.risultati}">
+			<tr>
+				<td class="order-table-row">Valore : #{risultati.nome} =
+					#{risultati.valore}</td>
+			</tr>
+		</ui:repeat>
+	</f:view>
 	</h:form>
 </h:body>
 </html>
