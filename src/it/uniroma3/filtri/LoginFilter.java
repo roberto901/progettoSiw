@@ -13,7 +13,7 @@ public class LoginFilter implements Filter {
 									throws IOException, ServletException {
 		HttpServletRequest req = (HttpServletRequest)request;
 		HttpSession session = req.getSession();
-		if (session.getAttribute("utente")==null) { 
+		if (session.getAttribute("username")==null) { 
 			RequestDispatcher rd  = this.application.getRequestDispatcher("login.xhtml");
 			rd.forward(request, response);	
 		}

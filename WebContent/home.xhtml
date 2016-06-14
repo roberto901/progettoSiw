@@ -14,24 +14,16 @@
 	<h:form>
 		<f:view>
 			<h1>Tipologie Di Esami:</h1>
-			<table class="order-table">
-				<tr>
-					<th class="order-table-header">Nome</th>
-
-					<th class="order-table-header">Descrizione</th>
-				</tr>
-				<tbody>
-					<ui:repeat var="tipologia" value="#{tipologiaController.tipologie}" >
-						<tr>
-							<td class="order-table-row">#{tipologia.nome}</td>
-							<td class="order-table-row">#{tipologia.descrizione}</td>
-							<td><h:commandButton
-									action="#{tipologiaController.listPrerequisiti(tipologia)}"
-									value="Vedi dettagli" /></td>
-						</tr>
-					</ui:repeat>
-				</tbody>
-			</table>
+					<h:dataTable var="tipologia"
+						value="#{tipologiaController.tipologie}">
+						<h:column>
+							. #{tipologia.nome}
+							. #{tipologia.descrizione}
+							<h:commandButton
+								action="#{tipologiaController.listPrerequisiti}"
+								value="Vedi dettagli" />
+						</h:column>
+					</h:dataTable>
 		</f:view>
 	</h:form>
 </h:body>

@@ -16,14 +16,14 @@
 
 		<td>Descrizione :<h:outputText
 				value="#{tipologiaController.tipologia.descrizione}" /></td>
-		<td>Prerequisiti : <ui:repeat var="prerequisiti"
+		<td>Prerequisiti : <h:dataTable var="prerequisiti"
 				value="#{tipologiaController.listPrerequisiti(tipologiaController.tipologia)}"
 				varStatus="status">
 
 				<td><h:outputText value="#{prerequisiti.prerequisiti}" /> <h:outputText
 						value="#{prerequisiti.descrizionePrerequisiti}" /></td>
 
-			</ui:repeat>
+			</h:dataTable>
 		</td>
 		<td>Prezzo : #{tipologiaController.tipologia.prezzo}</td>
 		<div class="btn-group">

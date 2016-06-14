@@ -18,14 +18,14 @@
 			<th class="order-table-header">Esami di #{loginController.paziente.nome} #{loginController.paziente.cognome} :</th>
 		</tr>
 		<tbody>
-			<ui:repeat var="esame" value="#{loginController.esami}" >
+			<h:dataTable var="esame" value="#{loginController.esami}" >
 				<tr>
 					<td class="order-table-row">#{esame.nome}</td>
 					<td><h:commandButton
 							action="#{esameController.dettagliEsame}"
 							value="Vedi dettagli" /></td>
 				</tr>
-			</ui:repeat>
+			</h:dataTable>
 		</tbody>
 	</table>
 </h:form>

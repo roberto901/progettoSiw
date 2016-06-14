@@ -101,4 +101,10 @@ public boolean equals(Object obj) {
 	return true;
 }
 
+@Override
+public String toString() {
+	return "Prerequisiti [id=" + id + ", Tipologia=" + Tipologia + ", prerequisiti=" + prerequisiti
+			+ ", descrizionePrerequisiti=" + descrizionePrerequisiti + "]";
+}
+
 }

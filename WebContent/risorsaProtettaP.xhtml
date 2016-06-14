@@ -13,24 +13,15 @@
 <h1>Benvenuto #{loginController.paziente.nome}
 	#{loginController.paziente.cognome}</h1>
 <h:body>
-	<h:form>
-		<f:view>
-			<table class="order-table">
-				<tr>
-					<th class="order-table-header">Esami :</th>
-				</tr>
-				<tbody>
-					<ui:repeat var="esame" value="#{loginController.esami}">
-						<tr>
-							<td class="order-table-row">Esame : #{esame.tipologia.nome}</td>
-							<td><h:commandButton
+	<h:form>Esami :
+					<h:dataTable var="esame" value="#{loginController.esami}">
+						<h:column>
+							<f:facet name="header"></f:facet>#{esame.tipologia.nome}
+							<h:commandButton
 									action="#{esameController.visualizzaEsame(esame)}"
-									value="Vedi dettagli" /></td>
-						</tr>
-					</ui:repeat>
-				</tbody>
-			</table>
-		</f:view>
+									value="Vedi dettagli" />
+						</h:column>
+					</h:dataTable>
 	</h:form>
 </h:body>
 </html>

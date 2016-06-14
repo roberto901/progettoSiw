@@ -39,11 +39,12 @@ public class TipologiaController  {
 	private Prerequisiti p;
 
 
-	public String createP() {
+	public String createP(TipologiaDiEsame tipologia) {
+		this.tipologia = tipologia;
 		this.p = this.prerequisitiFacade.createPrerequisiti(prerequisito,descrizionePrerequisiti,tipologia);
 		return "NuovoPrerequisito.xhtml";
 	}
-	public String createPR() {
+	public String createPR(TipologiaDiEsame tipologia) {
 		this.p = this.prerequisitiFacade.createPrerequisiti(prerequisito,descrizionePrerequisiti,tipologia);
 		return "risorsaProtettaA.xhtml";
 	}

@@ -1,0 +1,41 @@
+Specifiche: 
+
+Caso d'uso UC1: consulta offerta-attore primario: un utente non registrato
+Scenario principale di successo:
+1. Un utente non registrato vuole consultatre le tipologie di esame offerte dalla clinica.
+2. L'utente sceglie la sezione "home".
+3. Il sistema mostra l'elenco di tipologie disponibili.
+4. L'utente sceglie una tipologia di esame, selezionando la relativa opzione "vedi dettagli".
+5. Il sistema mostra l'elenco di prerequisiti associato alla tipologia scelta.
+(l'utente ripete i passi 4-5 un numero indefinito di volte)
+
+Caso d'uso UC2: crea esame(prenotazione) - attore primario: un amministratore
+Scenario principale di successo:
+1. Un amministratore vuole creare un nuovo esame.
+2. L'amministratore seleziona il comando "effettua il login".
+3. L'amministratore inserisce username e password. Il sistema verifica la correttezza dei dati e autentica l'amministratore.
+4. L'amministratore sceglie il comando "Inserisci un nuovo esame" .
+5. L'amministratore 
+
+Caso d'uso UC3: consulta risultati proprio esame - attore primario: un paziente
+Scenario principale di successo:
+1. Il paziente vuole consultare i risultati di un proprio esame.
+2. Il paziente seleziona il comando "Effettua il login".
+3. Il paziente inserisce username e password. Il sistema verifica la correttezza dei dati e autentica il paziente.
+4. Il sistema mostra l'elenco di esami relativo al paziente.
+5. Il paziente sceglie un esame, selezionando la relativa opzione "vedi dettagli".
+6. Il sistema mostra l'elenco di dettagli ed eventualmente i risultati dell'esame effettuato.
+(Il paziente ripete il passo 5 un numero indefinito di volte)
+
+Caso d'uso UC4: inserimento tipologia di esame - attore primario: un amministratore
+Scenario principale di successo:
+1. Un amministratore vuole creare una nuova tipologia di esame.
+2. L'amministratore seleziona il comando "effettua il login".
+3. L'amministratore inserisce username e password. Il sistema verifica la correttezza dei dati e autentica l'amministratore.
+4. L'amministratore sceglie il comando "Inserisci una nuova tipologia di esame".
+5. L'amministratore inserisce i dati della nuova tipologia di esame (codice, nome, descrizione e prezzo).
+6. L'amministratore seleziona l'attività "Inserisci prerequisiti per questa tipologia".
+7. L'amministratore inserisce le informazioni relative al prerequisito (nome e descrizione).
+(L'amministratore ripete il passo 7 un numero indefinito di volte)
+8. L'amministratore conferma l'inserimento della nuova tipologia.
+(L'amministratore ripete i passi 4-8 un numero indefinito di volte)
