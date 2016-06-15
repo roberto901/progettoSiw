@@ -146,10 +146,9 @@ public class Esame {
 		this.dataEsameEffettuato = dataEsameEffettuato;
 	}
 
-	public Esame(TipologiaDiEsame tipologia,Date dataPrenotazione, Date dataEsame, Paziente paziente,Medico medico) {
+	public Esame(TipologiaDiEsame tipologia,Date dataPrenotazione, Date dataEsame, Paziente paziente) {
 		super();
 		this.tipologia = tipologia;
-		this.medico = medico;
 		this.dataPrenotazione = dataPrenotazione;
 		this.dataEsameEffettuato = dataEsame;
 		this.paziente = paziente;

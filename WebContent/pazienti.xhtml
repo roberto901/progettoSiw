@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Scegli Paziente</title>
+</head>
+    <h:body rendered="#{loginController.AutenticaA()}"> 
+<f:view>
+<h:form>
+<ui:repeat value="#{esameController.pazienti}" var="p">
+						<p>
+						<h:commandLink value="#{p.nome}" action="#{esameController.pazienteCorrente(p)}"></h:commandLink>			
+						</p>
+						</ui:repeat>
+						</h:form>
+						</f:view>
+</h:body>
+</html>

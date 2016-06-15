@@ -18,10 +18,11 @@
 			<button type="submit" class="btn btn-default">Inserisci una nuova tipologia di esame</button>
 		</form>
 	</div>
-	<div class="btn-group">
-		<form action="NuovoEsame.xhtml">
-			<button type="submit" class="btn btn-default">Inserisci un nuovo esame</button>
-		</form>
+	<div>
+		<h:form>
+		<h:commandButton action="#{esameController.tuttiPazienti}" value="CREA NUOVO ESAME">
+			</h:commandButton>
+	</h:form>
 	</div>
     </h:body>
 

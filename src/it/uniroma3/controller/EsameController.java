@@ -1,5 +1,6 @@
 package it.uniroma3.controller;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class EsameController {
 private EsameFacade esameFacade;
 @EJB
 private UtenteFacade utenteFacade;
+@EJB
 private Risultati risultato;
 private List<Risultati> risultati;
 private String nomeRes;
@@ -33,7 +35,21 @@ private Date dataEsameEffettuato;
 private Paziente paziente;
 private Esame esame;
 private List<Esame> esami;
+private List<TipologiaDiEsame> tipologie;
+private List<Paziente> pazienti;
 
+public List<TipologiaDiEsame> getTipologie() {
+	return tipologie;
+}
+public void setTipologie(List<TipologiaDiEsame> tipologie) {
+	this.tipologie = tipologie;
+}
+public List<Paziente> getPazienti() {
+	return pazienti;
+}
+public void setPazienti(List<Paziente> pazienti) {
+	this.pazienti = pazienti;
+}
 public TipologiaDiEsame getTipologia() {
 	return tipologia;
 }
@@ -105,5 +121,49 @@ public String visualizzaEsame() {
 	this.esame = esameFacade.getEsame(Long.parseLong(codiceEsame));
 	this.risultati = esameFacade.findRisultati(esame);
 	return "dettagliEsame.xhtml";
+}
+public String visualizzaEsame(Esame esame) {
+	this.esame = esame;
+	this.risultati = esameFacade.findRisultati(esame);
+	return "dettagliEsame.xhtml";
+}
+public String pazienteCorrente(Paziente p){
+	this.paziente=p;
+	FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("paziente",paziente);
+	return "creaEsame";
+}
+
+public String tuttiPazienti(){
+	this.pazienti=this.utenteFacade.findAllPazienti();
+	FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("pazienti",pazienti);
+	return "creaEsame.xhtml";
+}
+
+public String scegliPaziente(){
+	this.pazienti=this.utenteFacade.findAllPazienti();
+	FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("pazienti",pazienti);
+	return "pazienti.xhtml";
+}
+public String tipologiaCorrente(TipologiaDiEsame t){
+	this.tipologia=t;
+	FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("tipologia",tipologia);
+	System.out.println(tipologia);
+	return "creaEsame";
+}
+
+public String scegliTipologia(){
+	this.tipologie=this.esameFacade.findAllTipologie();
+	FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("tipologie",tipologie);
+	return "tipologie.xhtml";
+}
+public String create(){
+	this.tipologia=(TipologiaDiEsame)FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("tipologia");
+	this.paziente=(Paziente)FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("paziente");
+	Calendar calendar = Calendar.getInstance();
+	this.dataPrenotazione = new Date(calendar.getTime().getTime());
+	this.esame= this.esameFacade.createEsame(tipologia,dataPrenotazione, 
+												dataEsameEffettuato, paziente);
+	FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("esame",esame);
+	return "risorsaProtettaA.xhtml";
 }
 }

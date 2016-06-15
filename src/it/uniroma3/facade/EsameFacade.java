@@ -22,7 +22,7 @@ public class EsameFacade {
 	@PersistenceContext(unitName="controller-unit" )
 	private EntityManager em;
 	
-	public List<Esame>  findAll(){
+	public List<Esame> findAll(){
 		CriteriaQuery<Esame> cq = em.getCriteriaBuilder().createQuery(Esame.class);
 		cq.select(cq.from(Esame.class));
 		List<Esame> esami = em.createQuery(cq).getResultList();
@@ -33,9 +33,9 @@ public class EsameFacade {
 		q.setParameter(1, paziente);
 		return q.getResultList();
 	}
-	public Esame createEsame(TipologiaDiEsame tipologia,Date dataPrenotazione, Date dataEsame, Paziente paziente,Medico medico){
-		Esame esame = new Esame(tipologia,dataPrenotazione,dataEsame,paziente,medico);
-		em.persist(tipologia);
+	public Esame createEsame(TipologiaDiEsame tipologia,Date dataPrenotazione, Date dataEsame, Paziente paziente){
+		Esame esame = new Esame(tipologia,dataPrenotazione,dataEsame,paziente);
+		em.persist(esame);
 		return esame;
 	}
 	public Esame getEsame(Long codice){
@@ -66,6 +66,12 @@ public class EsameFacade {
 		q.setParameter(1,esame.getId());
 		List<Esame> esami = q.getResultList();
 		return esami.get(0);
+	}
+	public List<TipologiaDiEsame> findAllTipologie() {
+		CriteriaQuery<TipologiaDiEsame> cq = em.getCriteriaBuilder().createQuery(TipologiaDiEsame.class);
+		cq.select(cq.from(TipologiaDiEsame.class));
+		List<TipologiaDiEsame> esami = em.createQuery(cq).getResultList();
+		return esami;
 	}
 
 }

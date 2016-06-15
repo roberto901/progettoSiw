@@ -6,8 +6,10 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaQuery;
 
 import it.uniroma3.model.Amministrazione;
+import it.uniroma3.model.Esame;
 import it.uniroma3.model.Paziente;
 import it.uniroma3.model.Utente;
 
@@ -43,5 +45,12 @@ public class UtenteFacade {
 		q.setParameter(1, utente);
 		List<Amministrazione> aa = q.getResultList();
 		return aa.get(0);
+	}
+
+	public List<Paziente> findAllPazienti() {
+		CriteriaQuery<Paziente> cq = em.getCriteriaBuilder().createQuery(Paziente.class);
+		cq.select(cq.from(Paziente.class));
+		List<Paziente> esami = em.createQuery(cq).getResultList();
+		return esami;
 	}
 }
