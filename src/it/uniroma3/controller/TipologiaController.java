@@ -67,6 +67,7 @@ public class TipologiaController  {
 	}
 	public String listTipologie() {
 		this.tipologie = tipologiaDAO.findAll();
+		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("tipologie",tipologie);
 		return LIST_TIPOLOGIE;
 	}
 	//	public String save() {
