@@ -14,6 +14,7 @@ import it.uniroma3.facade.UtenteFacade;
 import it.uniroma3.model.Amministrazione;
 import it.uniroma3.model.Esame;
 import it.uniroma3.model.Paziente;
+import it.uniroma3.model.Risultati;
 import it.uniroma3.model.Utente;
 
 
@@ -50,6 +51,7 @@ public class LoginController  {
 	private List<Esame> esami;
 	private Esame esame;
 	private Amministrazione amministrazione;
+	private List<Risultati> risultati;
 
 
 
@@ -106,11 +108,23 @@ public class LoginController  {
 			if (utente.getPassword().equals(password) && utente.getRuolo() == 2) {
 				this.paziente = utenteFacade.findPaziente(utente);
 				this.esami = this.esameFacade.findPerPaziente(this.paziente);
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("esami", esami);
 				FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("paziente", paziente);
 				return successo_paziente;
 			}
 		}
 		return fallimento;
+	}
+	public String visualizzaEsame() {
+		this.paziente = (Paziente)FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("paziente");
+		this.esami =  this.esameFacade.findPerPaziente(this.paziente);
+		String codiceEsame = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("esame");		
+		for (Esame e : esami) {
+			if (e.getId().equals(codiceEsame));
+				this.esame = e;
+		}
+		this.setRisultati(esameFacade.findRisultati(esame));
+		return "dettagliEsame.xhtml";
 	}
 	public boolean AutenticaP() {
 		if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("paziente") != null)
@@ -121,6 +135,12 @@ public class LoginController  {
 		if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("A") != null)
 			return true;
 		return false;
+	}
+	public List<Risultati> getRisultati() {
+		return risultati;
+	}
+	public void setRisultati(List<Risultati> risultati) {
+		this.risultati = risultati;
 	}
 }
 

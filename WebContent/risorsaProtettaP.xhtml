@@ -18,8 +18,10 @@
 						<h:column>
 							<f:facet name="header"></f:facet>#{esame.tipologia.nome}
 							<h:commandButton
-									action="#{esameController.visualizzaEsame(esame)}"
-									value="Vedi dettagli" />
+									action="#{loginController.visualizzaEsame}"
+									value="Vedi dettagli">
+									<f:param name="esame" value="#{esame.id}" />
+									</h:commandButton>
 						</h:column>
 					</h:dataTable>
 	</h:form>

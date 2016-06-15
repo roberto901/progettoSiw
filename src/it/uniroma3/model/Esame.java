@@ -16,7 +16,7 @@ public class Esame {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private String id;
 
 	@ManyToOne
 	private TipologiaDiEsame tipologia;
@@ -91,11 +91,11 @@ public class Esame {
 				+ dataPrenotazione + ", dataEsameEffettuato=" + dataEsameEffettuato +"]";
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -139,7 +139,7 @@ public class Esame {
 		this.paziente = paziente;
 	}
 
-	public Esame(Long id, Date dataPrenotazione, Date dataEsameEffettuato) {
+	public Esame(String id, Date dataPrenotazione, Date dataEsameEffettuato) {
 		super();
 		this.id = id;
 		this.dataPrenotazione = dataPrenotazione;

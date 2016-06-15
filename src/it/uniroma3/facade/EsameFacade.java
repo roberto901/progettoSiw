@@ -39,9 +39,7 @@ public class EsameFacade {
 		return esame;
 	}
 	public Esame getEsame(Long codice){
-		Query q = em.createQuery("select e from Esame e where e.id = ?1");
-		q.setParameter(1, codice);
-		return (Esame)q.getResultList().get(0);
+		return em.find(Esame.class, codice);
 	}
 		
 

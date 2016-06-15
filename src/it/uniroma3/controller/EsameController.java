@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 
 import it.uniroma3.facade.EsameFacade;
 import it.uniroma3.facade.UtenteFacade;
@@ -99,8 +100,9 @@ public List<Risultati> getRisultati() {
 public void setRisultati(List<Risultati> risultati) {
 	this.risultati = risultati;
 }
-public String visualizzaEsame(Esame esame) {
-	this.esame = esame;
+public String visualizzaEsame() {
+	String codiceEsame = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("esame");		
+	this.esame = esameFacade.getEsame(Long.parseLong(codiceEsame));
 	this.risultati = esameFacade.findRisultati(esame);
 	return "dettagliEsame.xhtml";
 }
