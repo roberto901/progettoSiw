@@ -14,8 +14,10 @@ Scenario principale di successo:
 1. Un amministratore vuole creare un nuovo esame.
 2. L'amministratore seleziona il comando "effettua il login".
 3. L'amministratore inserisce username e password. Il sistema verifica la correttezza dei dati e autentica l'amministratore.
-4. L'amministratore sceglie il comando "Inserisci un nuovo esame" .
-5. L'amministratore 
+4. L'amministratore sceglie il comando "Crea Esame".
+5. L'amministratore seleziona un paziente tramite il comando "Scegli paziente", una tipologia tramite il comando "Scegli tipologia" e inserisce la data in cui l'esame dovrà essere svolto dal paziente
+6. L'amministratore crea l'esame tramite il tasto "conferma". Il sistema salva automaticamente la data di prenotazione dell'esame.
+(l'utente ripete i passi 4-6 un numero indefinito di volte)
 
 Caso d'uso UC3: consulta risultati proprio esame - attore primario: un paziente
 Scenario principale di successo:
