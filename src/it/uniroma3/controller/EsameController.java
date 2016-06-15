@@ -104,5 +104,4 @@ public String visualizzaEsame(Esame esame) {
 	this.risultati = esameFacade.findRisultati(esame);
 	return "dettagliEsame.xhtml";
 }
-
 }

@@ -7,6 +7,7 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import javax.faces.context.FacesContext;
 
 import it.uniroma3.facade.PrerequisitiFacade;
 import it.uniroma3.facade.TipologiaFacade;
@@ -39,13 +40,15 @@ public class TipologiaController  {
 	private Prerequisiti p;
 
 
-	public String createP(TipologiaDiEsame tipologia) {
-		this.tipologia = tipologia;
+	public String createP() {
+		this.tipologia=(TipologiaDiEsame)FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("tipologia");
 		this.p = this.prerequisitiFacade.createPrerequisiti(prerequisito,descrizionePrerequisiti,tipologia);
 		return "NuovoPrerequisito.xhtml";
 	}
-	public String createPR(TipologiaDiEsame tipologia) {
+	public String createPR() {
+		this.tipologia=(TipologiaDiEsame)FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("tipologia");
 		this.p = this.prerequisitiFacade.createPrerequisiti(prerequisito,descrizionePrerequisiti,tipologia);
+		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().remove("tipologia");
 		return "risorsaProtettaA.xhtml";
 	}
 	public String listPrerequisiti(TipologiaDiEsame tipologia) {
@@ -53,24 +56,19 @@ public class TipologiaController  {
 		this.prerequisiti = prerequisitiFacade.findPT(tipologia);
 		return "dettagliTipologia.xhtml";
 	}
-
-
 	public String create() {
 		this.tipologia = this.tipologiaDAO.createTipologia(nome, prezzo, descrizione, codice);
+		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("tipologia",tipologia);
 		return "NuovoPrerequisito.xhtml";
 	}
-
 	public String edit() {
 		this.tipologiaDAO.updateTipologia(this.tipologia);
 		return EDIT_TIPOLOGIA;
 	}
-
 	public String listTipologie() {
 		this.tipologie = tipologiaDAO.findAll();
 		return LIST_TIPOLOGIE;
 	}
-
-
 	//	public String save() {
 	//		tipologiaDAO.createTipologia(nome, prezzo, descrizione)(tipologia);
 	//		return LIST_TIPOLOGIE;

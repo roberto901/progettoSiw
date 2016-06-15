@@ -7,9 +7,11 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import javax.faces.context.FacesContext;
 
 import it.uniroma3.facade.EsameFacade;
 import it.uniroma3.facade.UtenteFacade;
+import it.uniroma3.model.Amministrazione;
 import it.uniroma3.model.Esame;
 import it.uniroma3.model.Paziente;
 import it.uniroma3.model.Utente;
@@ -47,9 +49,16 @@ public class LoginController  {
 	private Utente utente;
 	private List<Esame> esami;
 	private Esame esame;
+	private Amministrazione amministrazione;
 
 
 
+	public Amministrazione getAmministrazione() {
+		return amministrazione;
+	}
+	public void setAmministrazione(Amministrazione amministrazione) {
+		this.amministrazione = amministrazione;
+	}
 	public Esame getEsame() {
 		return esame;
 	}
@@ -90,23 +99,28 @@ public class LoginController  {
 		Utente utente = utenteFacade.getUtente(username);
 		if(utente!=null){
 			if(utente.getPassword().equals(password) && utente.getRuolo() == 1) {
+				this.amministrazione = utenteFacade.findAmministrazione(utente);
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("A", amministrazione);
 				return successo_amministratore;
 			}
 			if (utente.getPassword().equals(password) && utente.getRuolo() == 2) {
 				this.paziente = utenteFacade.findPaziente(utente);
 				this.esami = this.esameFacade.findPerPaziente(this.paziente);
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("paziente", paziente);
 				return successo_paziente;
 			}
 		}
 		return fallimento;
 	}
 	public boolean AutenticaP() {
+		if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("paziente") != null)
 			return true;
-		
-		
+		return false;
 	}
 	public boolean AutenticaA() {
+		if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("A") != null)
 			return true;
+		return false;
 	}
 }
 

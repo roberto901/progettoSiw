@@ -10,7 +10,7 @@
 <h:head>
 	<title>Prerequisiti</title>
 </h:head>
-    <h:body rendered="#{loginController.AutenticaA}">
+    <h:body rendered="#{loginController.AutenticaA()}">
 	<f:view>
 		<h:form>
 			<h1>Prerequisiti per la tipologia #{tipologiaController.tipologia.nome}</h1>
@@ -32,5 +32,5 @@
 			</div>
 		</h:form>
 	</f:view>
-</body>
+</h:body>
 </html>

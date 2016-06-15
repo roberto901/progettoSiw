@@ -6,6 +6,7 @@
 		transaction-type="JTA">
 		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
 		<jta-data-source>PostgreSQL Database</jta-data-source>
+		<class>it.uniroma3.model.Amministrazione</class>
 		<class>it.uniroma3.model.Esame</class>
 		<class>it.uniroma3.model.Medico</class>
 		<class>it.uniroma3.model.Paziente</class>

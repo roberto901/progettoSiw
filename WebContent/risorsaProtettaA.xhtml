@@ -11,8 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Amministratore</title>
 </head>
-<h1>Benvenuto</h1>
-    <h:body rendered=#{loginController.AutenticaA}> 
+<h1>Benvenuto #{loginController.amministrazione.nome} #{loginController.amministrazione.cognome}</h1>
+    <h:body rendered="#{loginController.AutenticaA()}"> 
     <div class="btn-group">
 		<form action="NuovaTipologia.xhtml">
 			<button type="submit" class="btn btn-default">Inserisci una nuova tipologia di esame</button>

@@ -7,6 +7,7 @@ import javax.ejb.Stateless;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import it.uniroma3.model.Amministrazione;
 import it.uniroma3.model.Paziente;
 import it.uniroma3.model.Utente;
 
@@ -35,5 +36,12 @@ public class UtenteFacade {
 		List<Paziente> paziente = q.getResultList();
 		return paziente.get(0);
 
+	}
+
+	public Amministrazione findAmministrazione(Utente utente) {
+		Query q = em.createQuery("select a from Amministrazione a where a.utente = ?1");
+		q.setParameter(1, utente);
+		List<Amministrazione> aa = q.getResultList();
+		return aa.get(0);
 	}
 }

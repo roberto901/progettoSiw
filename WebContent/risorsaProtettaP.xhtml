@@ -10,9 +10,9 @@
 <head>
 <title>Paziente</title>
 </head>
-<h1>Benvenuto #{loginController.paziente.nome}
+<h1>Benvenuto #{LoginController.paziente.nome}
 	#{loginController.paziente.cognome}</h1>
-<h:body rendered="#{loginController.AutenticaP}">
+<h:body rendered="#{loginController.AutenticaP()}">
 	<h:form>Esami :
 					<h:dataTable var="esame" value="#{loginController.esami}">
 						<h:column>
